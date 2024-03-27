@@ -1,51 +1,69 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-import Item from './component/Item';
-import ItemDate from './component/ItemsDate';
+
+import Item from './components/Item';
+import ItemDate from './components/ItemDate';
+import Button from './components/Button';
+import ProductForm from './components/ProductForm';
+import NewProduct from './components/NewProduct';
+
 function App() {
   // const itemname = "John Doe"; another way to access
-  
   const response = [
-
     {
-      itemName :"SurfExcel",
-      itemDate : "20",
-      itemMonth : "July",
-      itemYear : "2008"
+      name :"Nirma",
+      day : "21",
+      month:"july", 
+      year:" 2008",
     },
     {
-      itemName :"Nirma",
-      itemDate : "31",
-      itemMonth : "December",
-      itemYear : "2000"
+      name :"Ariel",
+      day : "13",
+      month:"Decenber", 
+      year:" 2023",
     },
     {
-      itemName :"LifeBoy",
-      itemDate : "24",
-      itemMonth : "january",
-      itemYear : "1999"
-    }
-  ];
-  
-  
-  return (
-    <div>
-  
-      <Item name={response[0].itemName}>
-        Hello Bhai Log KYa Haal Chaal Hia
-      </Item>
+      name :"Tide",
+      day : "4",
+      month:"may", 
+      year:" 1988",
+    },
+    {
+      name :"Surf-Excel",
+      day : "6",
+      month:"April", 
+      year:"1998",
+    },
 
-      <ItemDate day={response[0 ].itemDate} month={response[0].itemMonth} year = {response[0].itemYear}></ItemDate>
+  ]
+  function A(obj){
+    console.log("I Am Inside The App.js");
+    console.log(obj);
+  }
+    return( 
+      <div>
+        <h1>Data se khelna Sikhle Chutiye</h1>
+        <NewProduct OnA = {A}></NewProduct>
+        <Button></Button>
+        <Item name= {response[0].name}></Item>
+        <ItemDate day = {response[0].day} month = {response[0].month} year = {response[0].year}></ItemDate>
 
-      <Item name={response[1].itemName}></Item>
-      <ItemDate day={response[1].itemDate} month={response[1].itemMonth} year = {response[1].itemYear}></ItemDate>
+        <Item name= {response[1].name} ></Item>
+        <ItemDate day = {response[1].day} month = {response[1].month} year = {response[1].year} ></ItemDate>
 
-      <Item name={response[2].itemName}></Item>
-      <ItemDate day={response[2].itemDate} month={response[2].itemMonth} year = {response[2].itemYear} ></ItemDate>
-     <div className="App"> Hello! Bachooooooo....</div>
-    
-    </div>
-  );
+        <Item name= {response[2].name}></Item>
+        <ItemDate day = {response[2].day} month = {response[2].month} year = {response[2].year}></ItemDate>
+
+        <Item name= {response[3].name}></Item>
+        <ItemDate day = {response[3].day} month = {response[3].month} year = {response[3].year}></ItemDate>
+        
+        <div className = "app">hello bachoooo</div>
+        
+      </div>
+      
+    );
+  
+
 }
 
 export default App;

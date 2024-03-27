@@ -1,12 +1,14 @@
-.App {
+.app {
   text-align: center;
+  text-transform:capitalize;
+  
   font-size: 60px;
   background-color: gray;
-  font-weight: 500;
+  font-weight: 800;
   width:100vw ;
   height:100vh;
   padding: 30px;
-}
+} 
 
 .App-logo {
   height: 40vmin;
